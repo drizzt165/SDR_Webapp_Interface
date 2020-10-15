@@ -1,0 +1,13 @@
+<h1><img src="https://www.cpp.edu/brand/img/cpp-logo-regular-web3.jpg" width="559" height="215" /></h1>
+<h1 style="text-align: left;">Emergency Response Portal</h1>
+<p>&nbsp;</p>
+<p>Enter your message to send to emergency crews below.</p>
+<form method="POST">
+<p><input name="text" type="text" /> <input type="submit" /></p>
+<p>&nbsp;</p>
+<h3>Chat Log:</h3>
+<p>{% autoescape false %}
+    {{chatLog}}
+    {% endautoescape %}
+</p>
+</form>
