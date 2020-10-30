@@ -1,14 +1,25 @@
-<meta http-equiv="refresh" content="5">
+<!-- <meta http-equiv="refresh" content="5"> -->
 <h1><img src="https://www.cpp.edu/brand/img/cpp-logo-regular-web3.jpg" width="559" height="215" /></h1>
 <h1 style="text-align: left;">Emergency Response Portal</h1>
 <p>&nbsp;</p>
-<p>Enter your message to send to emergency crews below.</p>
+<p>Fill out the following form to send to emergency crews.<br/></p>
 <form method="POST">
-<p><input name="text" type="text" /> <input type="submit" /></p>
+
+<p>Name</p>
+<p><input name = "name" type = "text"/> </p>
+
+<p>Message</p>
+<p><input name="message" type="text" /> </p>
+
+<p>Location (if possible)</p>
+<p><input name = "location" type = "text"/></p>
+<p>Click/tap to submit: <input type="submit" /></p>
 <p>&nbsp;</p>
-<h3>Chat Log:</h3>
+
+<!-- <h3>Chat Log:</h3>
 <p>{% autoescape false %}
     {{chatLog}}
     {% endautoescape %}
-</p>
+</p> -->
+
 </form>
