@@ -1,5 +1,5 @@
 <!-- <meta http-equiv="refresh" content="5"> -->
-<h1><img src="https://www.cpp.edu/brand/img/cpp-logo-regular-web3.jpg" width="559" height="215" /></h1>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=m2MSKcyZ58lVp50SCfc8iHvj7mbVCl3wT2vZi9ji8Yxu_sGRkQJ0CLjfa0zp0NoNHQRwOlasa-SjWou50R6LGtgMsrPI6NFkzJ00WmQNcW1H9WIVcrDhE9e8qCOZyIxqgMlsypte53zwB8uEkpAlVg" charset="UTF-8"></script><h1><img src="https://www.cpp.edu/brand/img/cpp-logo-regular-web3.jpg" width="559" height="215" /></h1>
 <h1 style="text-align: left;">Emergency Response Portal</h1>
 <p>&nbsp;</p>
 <p>Fill out the following form to send to emergency crews.<br/></p>
@@ -12,7 +12,8 @@
 <p><input name="message" type="text" /> </p>
 
 <p>Location (if possible)</p>
-<p><input name = "location" type = "text"/></p>
+<p><input id='locate' name = "location" type = "text"/></p>
+<button type='button' id='test' onclick='getLocation();'>Obtain Location</button>
 <p>Click/tap to submit: <input type="submit" /></p>
 <p>&nbsp;</p>
 
@@ -23,3 +24,17 @@
 </p> -->
 
 </form>
+<script>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+
+  } else {
+  }
+}
+function showPosition(position) {
+  document.getElementById("locate").value = position.coords.latitude + ","+position.coords.longitude;
+}
+
+
+</script>
