@@ -5,12 +5,16 @@
 <p>Fill out the following form to send to emergency crews.<br/></p>
 <form method="POST">
 
+<!-- Create text field for the users name -->
 <p>Name</p>
 <p><input name = "name" type = "text"/> </p>
 
+<!-- Create message entry field -->
 <p>Message</p>
 <p><input name="message" type="text" /> </p>
 
+<!-- Create location field.
+This will generally be auto-filled. -->
 <p>Location (if possible)</p>
 <p><input id='locate' name = "location" type = "text"/></p>
 <button type='button' id='test' onclick='getLocation();'>Obtain Location</button>
@@ -24,6 +28,9 @@
 </p> -->
 
 </form>
+
+<!-- Script which gathers location from user web browser
+Note: The user must accept to share their location first -->
 <script>
 function getLocation() {
   if (navigator.geolocation) {
@@ -35,6 +42,5 @@ function getLocation() {
 function showPosition(position) {
   document.getElementById("locate").value = position.coords.latitude + ","+position.coords.longitude;
 }
-
 
 </script>
